@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_margin="8dp"
+    android:id="@+id/cardview"
+    android:background="@drawable/custom_bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+
+        <ImageView
+            android:layout_alignParentLeft="true"
+            android:id="@+id/iv_imgProduto"
+            android:layout_width="5dp"
+            android:layout_height="50dp"
+            android:layout_marginRight="0dp"
+            android:adjustViewBounds="true"
+            ></ImageView>
+
+
+
+
+        <TextView
+            android:textColor="@color/colorPrimarytext"
+            android:layout_toRightOf="@+id/iv_imgProduto"
+            android:id="@+id/tv_nome"
+            android:text="Afonso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="30dp"
+            android:layout_marginBottom="5dp"
+            android:paddingRight="16dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:layout_below="@+id/tv_nome"
+            android:layout_alignLeft="@+id/tv_nome"
+            android:id="@+id/tv_categoria"
+            android:text="Em Atendimento"
+            android:paddingLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/txtValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/colorFABPressed"
+            android:textSize="@dimen/valor"/>
+
+
+        <View
+            android:id="@+id/vw_divider"
+            android:background="@color/colorDivider"
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:layout_alignTop="@+id/txtValor"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:textColor="@color/colorPrimaryDark"
+            android:id="@+id/hora"
+            android:text="Em Atendimento"
+            android:paddingLeft="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingRight="16dp"
+            android:textSize="12sp"
+            android:layout_above="@+id/tv_categoria"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</RelativeLayout>
