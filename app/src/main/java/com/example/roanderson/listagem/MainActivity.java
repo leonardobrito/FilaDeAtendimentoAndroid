@@ -1,18 +1,14 @@
 package com.example.roanderson.listagem;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
 
 import com.example.roanderson.listagem.adapters.ListEsperaAdapter;
 import com.example.roanderson.listagem.models.ListEspera;
@@ -54,40 +50,7 @@ public class MainActivity extends AppCompatActivity implements NetworkObserved{
         });
 
 
-        /*Items = new ArrayList<>();
-        listEspera1 = new ListEspera();
-        listEspera2 = new ListEspera();
-        listEspera3 = new ListEspera();
-        listEspera4 = new ListEspera();
-        listEspera5 = new ListEspera();
-        listEspera7 = new ListEspera();
-        listEspera6 = new ListEspera();
-        listEspera1.setNome("Afonso");
-        listEspera1.setStatus("Atendido");
-        Items.add(listEspera1);
 
-
-        listEspera2.setNome("Beruwilson");
-        listEspera2.setStatus("Atendido");
-        Items.add(listEspera2);
-        listEspera3.setNome("Celso");
-        listEspera3.setStatus("Em Atendimento");
-        Items.add(listEspera3);
-
-        listEspera4.setNome("Rafael");
-        listEspera4.setStatus("Em espera");
-        Items.add(listEspera4);
-
-        listEspera5.setNome("Ricardo");
-        listEspera5.setStatus("Em espera");
-        Items.add(listEspera5);
-
-        listEspera6.setNome("Roanderson Felipe de Souza Pinheiro");
-        listEspera6.setStatus("Em espera");
-        Items.add(listEspera6);
-        listEspera7.setNome("Maria da Saúde");
-        listEspera7.setStatus("Em espera");
-        Items.add(listEspera7);*/
         executarRequestFila();
         atualizaLista();
         for (int i=0;i<Items.size();i++){
@@ -132,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements NetworkObserved{
         //param = encodeUTF8(param);
         NetworkManager networkManager = new NetworkManager();
         networkManager.setNetworkObserved(this);
-        networkManager.jsonArrayRequest(null);
+        networkManager.jsonArrayRequest2();
     }
 
     private String encodeUTF8(String param) {
@@ -183,7 +146,7 @@ public class MainActivity extends AppCompatActivity implements NetworkObserved{
         ListEspera listEspera = new ListEspera();
         listEspera.setNome(jsonObj.getString("nome"));
         listEspera.setStatus(Integer.parseInt(jsonObj.getString("status")));
-        listEspera.setHora(jsonObj.getString("created_at"));
+        listEspera.setHora(jsonObj.getString("hora"));
         return listEspera;
     }
 
