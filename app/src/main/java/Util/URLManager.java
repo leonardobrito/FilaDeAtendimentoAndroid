@@ -6,7 +6,7 @@ package Util;
 public class URLManager {
 
 
-    public static String URL_BASE = "http://192.168.74.152:3000/";
+    public static String URL_BASE = "http://192.168.43.86:3000/";
     public static String URL_GETFILA = URL_BASE+"getFila";
 
 }
